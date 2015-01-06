@@ -70,3 +70,25 @@ Adjust the CSS
     color: #FFFAF0;
 	
   }
+  
+Add Devise
+  gemfile 'devise'
+  
+  Install devise
+    $ rails g devise:install
+
+  Configure Devise in config/environments/development.rb
+    config.action_mailer.default_url_options = { host: 'localhost:3000' }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    
+  Install the views for devise
+    rails g devise:views
+    
+Add User model
+  rails g devise User
+  Add t.string :name to user's table'
+  Uncomment everthing under the confirmable section in the migration table
+  Add confirmable in model users.rb
+  
+  
