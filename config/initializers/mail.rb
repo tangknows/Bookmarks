@@ -10,18 +10,4 @@ ActionMailer::Base.smtp_settings = {
 ActionMailer::Base.delivery_method = :smtp
 
 # Makes debugging *way* easier.
-ActionMailer::Base.raise_delivery_errors = :true
-
-class DevelopmentMailInterceptor
-  def self.delivering_email(message)
-    message.to =  'ngvt@live.com'
-    message.cc = nil
-    message.bcc = nil
-  end
-end
-
-# Locally, outgoing mail will be 'intercepted' by the
-# above DevelopmentMailInterceptor before going out
-if Rails.env.development?
-  ActionMailer::Base.register_interceptor(DevelopmentMailInterceptor)
-end
+ActionMailer::Base.raise_delivery_errors = true
