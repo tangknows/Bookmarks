@@ -91,4 +91,21 @@ Add User model
   Uncomment everthing under the confirmable section in the migration table
   Add confirmable in model users.rb
   
+Added HEROKU
+
+Adding FIGARO
+  gem 'figaro', '1.0'
+  bundle
+  figaro install
+  
+  Open up the generated file and add your private information:
+  config/application.yml
+  SENDGRID_PASSWORD: exAmplePa$$
+  SENDGRID_USERNAME: myspecialusername
+  
+Set up Sengrid
+
+Add Heroku config mail gun
+
+  
   

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bookmarks::Application.config.secret_key_base = '762181ce2dae2c0ff5eb4edcc7505b06fae549e0065851987a498e5ea28b58192418ca285fb00a37d0dc30df5161476c4affd899f5eaf630f40872f07e24c31f'
+Bookmarks::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']

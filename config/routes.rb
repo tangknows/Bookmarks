@@ -1,8 +1,12 @@
 Bookmarks::Application.routes.draw do
   
+  get "incoming/create"
+  devise_for :installs
   devise_for :users
   get 'about' => 'welcome#about'
-  root to: "welcome#index"
+  root to: 'welcome#index'
+  post :incoming, to: 'incoming#create'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
