@@ -108,5 +108,7 @@ Set up Sengrid
 Add Heroku config mail gun
 heroku config to see keys
 heroku config:set SECRET_KEY='xxxx'
+heroku run rake db:setup
+you got to set up the database
   
   

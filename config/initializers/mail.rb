@@ -10,7 +10,7 @@ ActionMailer::Base.smtp_settings = {
 ActionMailer::Base.delivery_method = :smtp
 
 # Makes debugging *way* easier.
-ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.raise_delivery_errors = :true
 
 class DevelopmentMailInterceptor
   def self.delivering_email(message)
