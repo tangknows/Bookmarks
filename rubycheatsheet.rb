@@ -106,6 +106,7 @@ Adding FIGARO
 Set up Sengrid
 
 Add Heroku config mail gun
-
+heroku config to see keys
+heroku config:set SECRET_KEY='xxxx'
   
   
