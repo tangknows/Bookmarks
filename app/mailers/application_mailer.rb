@@ -4,6 +4,3 @@ class ApplicationMailer < ActionMailer::Base
   layout 'mailer'
 end
  
-# app/mailers/user_mailer.rb
-class UserMailer < ApplicationMailer
-end
