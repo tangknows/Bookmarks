@@ -10,7 +10,7 @@ class IncomingController < ApplicationController
     puts "INCOMING PARAMS HERE: #{params}"
     
     
-    puts params[:Subject]
+    puts params[:subject]
  
 
   end
