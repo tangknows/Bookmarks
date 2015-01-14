@@ -9,16 +9,11 @@ class IncomingController < ApplicationController
     # to get a sense of what you're dealing with.2
     puts "INCOMING PARAMS HERE: #{params}"
     
-    subject = "#{params}"
     
-    puts subject.values_at("Subject")
+    subject = Incoming.find(params[:Subject])
+    
+    puts subject
  
-   
-
-    # You put the message-splitting and business
-    # magic here. 
-
-    # Assuming all went well. 
     head 200
   end
   
