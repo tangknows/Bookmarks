@@ -110,5 +110,26 @@ heroku config to see keys
 heroku config:set SECRET_KEY='xxxx'
 heroku run rake db:setup
 you got to set up the database
+
+params[:subject]
+
+Model
+MODELS BOOKMARKS
+  belongs to Users
+    belongs to Topics
+MODELS TOPICS
+  has many bookmarks
   
+  
+TOPICS
+t.string  title
+t.text    body
+
+USERS
+t.string  name
+
+BOOKMARKS
+t.string  link
+t.string  USER_ID
+t.string  TOPIC_ID
   
