@@ -10,11 +10,9 @@ class IncomingController < ApplicationController
     puts "INCOMING PARAMS HERE: #{params}"
     
     
-    subject = Incoming.find(params[:Subject])
-    
-    puts subject
+    puts params[:Subject]
  
-    head 200
+
   end
   
     
