@@ -9,12 +9,11 @@ class IncomingController < ApplicationController
     # to get a sense of what you're dealing with.2
     puts "INCOMING PARAMS HERE: #{params}"
     
-    @subject = Incoming.new(params[:subject])
-    @subject.save
+    subject = "#{params}"
     
-    puts "This is the #{@subject}"
-    puts "This is the #{subject2}"
-    
+    puts subject.values_at("Subject")
+ 
+   
 
     # You put the message-splitting and business
     # magic here. 
@@ -22,5 +21,7 @@ class IncomingController < ApplicationController
     # Assuming all went well. 
     head 200
   end
+  
+    
   
 end
