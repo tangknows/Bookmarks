@@ -1,5 +1,7 @@
 Bookmarks::Application.routes.draw do
   
+  resources :topics
+  
   get "incoming/create"
   devise_for :installs
   devise_for :users
