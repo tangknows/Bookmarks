@@ -10,17 +10,14 @@ class IncomingController < ApplicationController
     puts "INCOMING PARAMS HERE: #{params}"
 
     
-    sender = params[:sender]
-    @incomingUserID = current_user.id
+    sender = params["sender"]
+    incomingUserID = current_user.id
     
+    Topic.create(:title => params["sender"], :user_id => incomingUserID)
     
-    puts "this is #{sender}"
-    
-    Topic.create(:title => sender, :user_id => @incomingUserID)
-  
     
     puts sender
-    puts @incomingUserID
+    puts incomingUserID
   end
   
 end
