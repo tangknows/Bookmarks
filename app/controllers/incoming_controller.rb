@@ -11,9 +11,8 @@ class IncomingController < ApplicationController
 
     
     sender = params["sender"]
-    incomingUserID = current_user.id
     
-    Topic.create(:title => params["sender"], :user_id => incomingUserID)
+    Topic.create(:title => params["sender"])
     
     
     puts sender
