@@ -1,12 +1,15 @@
 Bookmarks::Application.routes.draw do
+  devise_for :users
+  devise_for :installs
   
-  resources :topics
+  
+  root to: 'welcome#index'  
+  resources :topics do
+    resources :bookmarks
+  end
   
   get "incoming/create"
-  devise_for :installs
-  devise_for :users
   get 'about' => 'welcome#about'
-  root to: 'welcome#index'
   post :incoming, to: 'incoming#create'
   
   

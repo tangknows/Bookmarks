@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 group :production do 
 	gem 'pg'
@@ -10,6 +10,10 @@ end
 group :development do
 	gem 'sqlite3'
 end
+
+gem 'figaro', '1.0'
+
+gem 'redcarpet'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
@@ -35,8 +39,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'devise'
-
-gem 'figaro' , '1.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

@@ -1,0 +1,11 @@
+<h1>Bookmark#index</h1>
+<p>Find me in app/views/topics/index.html.erb</p>
+
+<div>
+	
+	<% @bookmarks.each do |bookmark| %>
+	<%= link_to bookmark.link, [@topic, @bookmark] %>
+	<% end %>
+	
+</div>
+

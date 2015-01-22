@@ -20,6 +20,16 @@ Change gemfile
   group :development do
 	  gem 'sqlite3'
   end
+  
+Add markdown
+gem 'redcarpet'
+
+def markdown(text)
+  renderer = Redcarpet::Render::HTML.new
+  extensions = {fenced_code_blocks: true}
+  redcarpet = Redcarpet::Markdown.new(renderer, extensions)
+  (redcarpet.render text).html_safe
+end
 
 Add first controller
   rails g controller welcome index about
@@ -132,4 +142,12 @@ BOOKMARKS
 t.string  link
 t.string  USER_ID
 t.string  TOPIC_ID
+
+rails g controller Topics index show new edit update
+rails g model Bookmark link:string user:references topic:references
+
+generated Bookmarks controller
+create crud
+
+
   

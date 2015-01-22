@@ -1,10 +1,15 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all
+    @bookmarks = Topic.all.includes(:bookmarks).where('bookmarks.topic_id = 2').references(:bookmarks)
+
+
   end
 
   def show
     @topic = Topic.find(params[:id])
+    @bookmarks = @topic.bookmarks
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -42,6 +47,7 @@ class TopicsController < ApplicationController
       end
   
   end
+  
   
 end
 
