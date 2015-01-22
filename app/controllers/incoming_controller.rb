@@ -16,7 +16,6 @@ class IncomingController < ApplicationController
     
     
     puts sender
-    puts incomingUserID
-  end
+
   
 end
