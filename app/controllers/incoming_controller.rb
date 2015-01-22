@@ -10,10 +10,12 @@ class IncomingController < ApplicationController
     puts "INCOMING PARAMS HERE: #{params}"
 
     
-    sender = params["sender"]
+    sender = params[:sender]
+    puts sender
     
-    Topic.create(:title => params["sender"], :topic => params["sender"])
-
+    Topic.create(:title => params[:sender], :topic => params[:sender])
+    
+    head 200
   end
   
 end
