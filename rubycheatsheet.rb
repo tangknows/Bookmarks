@@ -150,4 +150,11 @@ generated Bookmarks controller
 create crud
 
 
+MAIL INTEGRATION
+to grab the user of who sent the e-mail, 
+grab e-mail
+set as variable
+search database for variable that matches
+when e-mail = e-mail of a user, grab the id of that user and set as a variable
+  place variable into database creation 
   

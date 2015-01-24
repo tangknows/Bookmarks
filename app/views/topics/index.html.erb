@@ -4,10 +4,16 @@
 <div>
 	
 	<% @topics.each do |topic| %>
+	<div>
 	<%= link_to topic.title, topic %>
+		<%= topic.bookmarks.each do |bookmark| %>
+			<% if topic.id = bookmark.topic_id %>
+			<%= bookmark.topic_id %>
+			<% end %>
+		<%end%>
+	</div>
+</br></br>
 	<% end %>
-	
-
 	
 </div>
 
