@@ -4,12 +4,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
+.topicContainer {
 
+	height:600px;
+	position: relative;
+	top: 100px;
 
 }
 
+.topicTitle a {
+	
+	font-size:50px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 	sans-serif;
+	font-weight:800;
+	margin-top:10px;
+}
 
-.nav nav {
-	text-color: white;
+.topicTitle {
+	position:relative;
+	width:300px;
+	left:600px;
+	text-align:center;
+}
+
+.topicURL{
+	top:10px;
+	position:relative;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 	sans-serif;
+	width:600px;
+	position:relative;
+	text-align:center;
+	left:450px;
 }

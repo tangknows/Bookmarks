@@ -1,6 +1,8 @@
 
 .container {
-	
+	top:0px;
+	position:relative;
+	height:100px;
 }
 
 ul {
@@ -45,9 +47,8 @@ nav {
 		
 html body{
 	margin:0px;
-	height: 700px;
+	height: auto;
 	padding: 0px;
-	border:1px solid;
 	height:auto;	
 }
 

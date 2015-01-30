@@ -2,23 +2,23 @@
   <%= javascript_include_tag "topics", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 
-<div class="container">
+<div class="topicContainer">
 
-<div>
+
 	
+
 	<% @topics.each do |topic| %>
-	<div>
-	<%= link_to topic.title, topic %>
+				<div class="topicTitle"><%= link_to topic.title, topic %> 	</div>
+	
 		<% topic.bookmarks.each do |bookmark| %>
 			<% if topic.id = bookmark.topic_id %>
-			<%= markdown bookmark.link %>
+			<div class="topicURL">	<%= markdown bookmark.link %>	</div>	
 			<% end %>
+		
 		<% end %>
-	</div>
-</br></br>
+		<br>
 	<% end %>
+
 	
+	</div>
 </div>
-
-</div>
-
