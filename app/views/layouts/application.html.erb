@@ -1,16 +1,41 @@
 <!DOCTYPE html>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+
 <html>
-<head>
-</head>
+
 <body>
-	<div class="container">
 	<nav>
-	<ul class= "nav nav-pills pull-right">
-         <li><%= link_to "Home", root_path %></li>
-         <li><%= link_to "About", about_path %></li>
+	<span class="title">
+		BeeTalks 
+	</span>	
+	<div class="container">
+	<ul class= "nav navbar-nav">
+         <li><%= link_to "HOME", root_path %></li>
+         <li><%= link_to "ABOUT", about_path %></li>
+		 <li><%= link_to "LOG-IN", root_path %>
+		 
     </ul>
 	</nav>
+	
+	
+	<div class="descriptionContainer">
+		<div class= "descriptionPic">
+		</div>
+		<div class= "description1">
+		ABOUT US 
+		</div>
+		<div class= "description2">
+		Send us your bookmarks. <br>
+		So we can bookmark them...
+		</div>
 
+	</div>
+	
+
+	
 <%= yield %>
 
 	</div>

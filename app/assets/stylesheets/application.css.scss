@@ -1,16 +1,89 @@
-@import "bootstrap";
 
-
-.user-info {
-  margin-top: 9px;
+.container {
+	
 }
 
-.nav {
-  color: #FFFAF0;
-  margin-top: 45px;
+ul {
+	position:relative;
+	margin-left: 0px;
+	padding: 0px;
+}
+
+.title {
+	color: #FFFAF0;
+	font: monospace;
+	font-size: 40px;
+	#left: 1000px;
+	top: 45px;
+	position: relative;
+	letter-spacing: 2px;
+	left:200px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+}
+
+
+nav { 
+	margin-top:0px;
+	height: 1100px;
+	width:auto;
+	background: #333;
+	background: linear-gradient( rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), image-url('/assets/colorfulbooks.jpg') no-repeat;
+	background-size: contain;
+	top:0px;
+	position:relative;
 }
 
 .nav li a{
+		color: #FFFAF0;
+		font: monospace;
+		font-size: 15px;
+		left: 850px;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 	sans-serif;
+		font-weight:300;
+	}
+		
+html body{
+	margin:0px;
+	height: 700px;
+	padding: 0px;
+	border:1px solid;
+	height:auto;	
+}
+
+.descriptionContainer{
+	width: auto;
+	height:300px;
+	background: rgba(117,210,215,0.92)
+}
+
+.description1 {
+	height: 100px;
+	width: 600px;
+	bottom:0px;
+	text-align: right;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial,  	sans-serif;
+	text-color: #000;
+	font-weight:700;
+	font-size: 100px;
+	position:relative;
 	color: #FFFAF0;
+	top: 80px;
+	left:100px;
+	
+	}
+
+
+
+.description2 {
+	height: 100px;
+	width: 500px;
+	text-align: left;
+	position:relative;
+	left: 800px;
+		color: #FFFAF0;
+		font-weight:700;
+		font-size: 30px;
+		top:12px;
 	
 }

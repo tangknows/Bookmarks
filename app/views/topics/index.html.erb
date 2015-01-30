@@ -1,19 +1,24 @@
-<h1>Topics#index</h1>
-<p>Find me in app/views/topics/index.html.erb</p>
+  <%= stylesheet_link_tag "topics", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "topics", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+<div class="container">
 
 <div>
 	
 	<% @topics.each do |topic| %>
 	<div>
 	<%= link_to topic.title, topic %>
-		<%= topic.bookmarks.each do |bookmark| %>
+		<% topic.bookmarks.each do |bookmark| %>
 			<% if topic.id = bookmark.topic_id %>
-			<%= bookmark.topic_id %>
+			<%= markdown bookmark.link %>
 			<% end %>
-		<%end%>
+		<% end %>
 	</div>
 </br></br>
 	<% end %>
 	
+</div>
+
 </div>
 
